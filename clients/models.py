@@ -6,4 +6,6 @@ class Client(models.Model):
     full_name = models.CharField(max_length=200)
     # phone_number = PhoneNumberField(null=False, blank=False, unique=True)
     phone_number = PhoneField(blank=True, help_text='Contact phone number')
-    
+
+    def __str__(self):
+        return self.full_name
