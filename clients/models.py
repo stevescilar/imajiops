@@ -6,7 +6,7 @@ from django_countries.fields import CountryField
 class Client(models.Model):
     full_name = models.CharField(max_length=200)
     country = CountryField(blank=True)
-    company_name = models.CharField(max_length=200)
+    # company_name = models.CharField(max_length=200)
     # phone_number = PhoneNumberField(null=False, blank=False, unique=True)
     phone_number = PhoneField(blank=True, help_text='Contact phone number')
     no_of_ctns_ordered = models.CharField(max_length=200)
