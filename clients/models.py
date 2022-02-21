@@ -6,8 +6,13 @@ from django_countries.fields import CountryField
 class Client(models.Model):
     full_name = models.CharField(max_length=200)
     country = CountryField(blank=True)
+    company_name = models.CharField(max_length=200)
     # phone_number = PhoneNumberField(null=False, blank=False, unique=True)
     phone_number = PhoneField(blank=True, help_text='Contact phone number')
+    no_of_ctns_ordered = models.CharField(max_length=200)
+    no_of_cbm_ordered = models.CharField(max_length=200)
+    description = models.TextField(max_length=500)
+    shipping_mark = models.CharField(max_length=500)
     
 
     def __str__(self):
