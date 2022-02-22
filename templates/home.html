@@ -4,5 +4,15 @@
 {% block content %}
 
 <h3> We are getting there</h3>
+<h3> this are the clients </h3>
+<div>
+    <div>
+        {% for client in clients %}
+        <div>
+            <h5>{{client.full_name}}</h5>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

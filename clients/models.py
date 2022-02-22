@@ -13,6 +13,8 @@ class Client(models.Model):
     no_of_cbm_ordered = models.CharField(max_length=200)
     description = models.TextField(max_length=500)
     shipping_mark = models.CharField(max_length=500)
+    date_registered = models.DateTimeField(auto_now_add=True)
+    
     
 
     def __str__(self):
