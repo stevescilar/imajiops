@@ -8,6 +8,11 @@ from . models import Client
 
 def index(request):
 
-    client = Client.objects.all()
+    clients = Client.objects.all()
+    context = {'clients':clients}
+    return render (request,'clients/home.html',context)
+
+def client(request,pk):
+    client = Client.objects.get(id=pk)
     context = {'client':client}
-    return render (request,'home.html',context)
+    return render (request,'clients/client.html',context)
