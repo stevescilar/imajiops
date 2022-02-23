@@ -5,4 +5,5 @@ urlpatterns = [
     # path('home/', views.home, name='home'),
     path('', views.index, name='index'),
     path('client/<str:pk>/', views.client , name = "client"),
+    path('create-client/',views.createClient, name = 'create-client'),
 ]
