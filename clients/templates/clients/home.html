@@ -3,17 +3,28 @@
 <!-- block content -->
 {% block content %}
 
-<h3> We are getting there</h3>
-<h3> this are the clients </h3>
-<div>
-    <a href="{% url 'create-client' %}">Enter New Client </a>
+<style>
+    .home-container{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+</style>
+
+<div class="home-container">
     <div>
-        {% for client in clients %}
+        <a href="{% url 'create-client' %}">Enter New Client </a>
         <div>
-            <h5>{{client.id}} -- <a href="{% url 'client' client.id %}">{{client.full_name}}</a></h5>
+            {% for client in clients %}
+            <div>
+                <h5>{{client.id}} -- <a href="{% url 'client' client.id %}">{{client.full_name}}</a></h5>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-</div>
+
+    <div>
+        more to come
+    </div>
+</div>>
 
 {% endblock %}
